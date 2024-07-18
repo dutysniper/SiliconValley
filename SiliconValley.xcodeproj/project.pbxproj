@@ -8,19 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		91B99B2B2C493FAE003FC1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99B2A2C493FAE003FC1C1 /* AppDelegate.swift */; };
-		91B99B2D2C493FAE003FC1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99B2C2C493FAE003FC1C1 /* ViewController.swift */; };
-		91B99B302C493FAE003FC1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B99B2E2C493FAE003FC1C1 /* Main.storyboard */; };
+		91B99B2D2C493FAE003FC1C1 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99B2C2C493FAE003FC1C1 /* MainScreenViewController.swift */; };
 		91B99B322C493FB2003FC1C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91B99B312C493FB2003FC1C1 /* Assets.xcassets */; };
 		91B99B352C493FB2003FC1C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91B99B332C493FB2003FC1C1 /* LaunchScreen.storyboard */; };
+		91B99B402C49480C003FC1C1 /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99B3F2C49480C003FC1C1 /* EpisodeCell.swift */; };
+		91B99B422C494ABA003FC1C1 /* EpisodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B99B412C494ABA003FC1C1 /* EpisodeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		91B99B272C493FAE003FC1C1 /* SiliconValley.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiliconValley.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91B99B2A2C493FAE003FC1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		91B99B2C2C493FAE003FC1C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		91B99B2F2C493FAE003FC1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		91B99B2C2C493FAE003FC1C1 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		91B99B312C493FB2003FC1C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91B99B342C493FB2003FC1C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		91B99B3F2C49480C003FC1C1 /* EpisodeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
+		91B99B412C494ABA003FC1C1 /* EpisodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +55,46 @@
 		91B99B292C493FAE003FC1C1 /* SiliconValley */ = {
 			isa = PBXGroup;
 			children = (
-				91B99B2A2C493FAE003FC1C1 /* AppDelegate.swift */,
-				91B99B2C2C493FAE003FC1C1 /* ViewController.swift */,
-				91B99B2E2C493FAE003FC1C1 /* Main.storyboard */,
-				91B99B312C493FB2003FC1C1 /* Assets.xcassets */,
+				91B99B3D2C494766003FC1C1 /* Scenes */,
+				91B99B3C2C494752003FC1C1 /* Resources */,
+				91B99B3B2C49473F003FC1C1 /* App */,
 				91B99B332C493FB2003FC1C1 /* LaunchScreen.storyboard */,
 			);
 			path = SiliconValley;
+			sourceTree = "<group>";
+		};
+		91B99B3B2C49473F003FC1C1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				91B99B2A2C493FAE003FC1C1 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		91B99B3C2C494752003FC1C1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				91B99B312C493FB2003FC1C1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		91B99B3D2C494766003FC1C1 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				91B99B3E2C4947DF003FC1C1 /* MainScreen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		91B99B3E2C4947DF003FC1C1 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				91B99B2C2C493FAE003FC1C1 /* MainScreenViewController.swift */,
+				91B99B3F2C49480C003FC1C1 /* EpisodeCell.swift */,
+				91B99B412C494ABA003FC1C1 /* EpisodeModel.swift */,
+			);
+			path = MainScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +157,6 @@
 			files = (
 				91B99B352C493FB2003FC1C1 /* LaunchScreen.storyboard in Resources */,
 				91B99B322C493FB2003FC1C1 /* Assets.xcassets in Resources */,
-				91B99B302C493FAE003FC1C1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,22 +167,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91B99B2D2C493FAE003FC1C1 /* ViewController.swift in Sources */,
+				91B99B2D2C493FAE003FC1C1 /* MainScreenViewController.swift in Sources */,
 				91B99B2B2C493FAE003FC1C1 /* AppDelegate.swift in Sources */,
+				91B99B402C49480C003FC1C1 /* EpisodeCell.swift in Sources */,
+				91B99B422C494ABA003FC1C1 /* EpisodeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		91B99B2E2C493FAE003FC1C1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				91B99B2F2C493FAE003FC1C1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		91B99B332C493FB2003FC1C1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -285,7 +313,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,7 +338,6 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.video";
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
